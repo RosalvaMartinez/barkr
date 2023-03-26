@@ -9,7 +9,7 @@ const dogSchema = new Schema({
         type: String,
         required: true,
     },
-    birhday: {
+    birthday: {
         type: String,
         required: true,
     },
@@ -25,3 +25,4 @@ const dogSchema = new Schema({
 });
 
 module.exports = dogSchema;
+
