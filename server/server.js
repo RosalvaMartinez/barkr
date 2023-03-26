@@ -1,10 +1,12 @@
 const express = require('express');
+const { ApolloServer } = require('apollo-server-express');
 // path is a core node module built into node, no need to install. built in
 const path = require('path');
 const db = require('./config/connection');
 
 
 const { authMiddleware } = require('./utils/auth');
+const { typeDefs, resolvers } = require('./schemas');
 
 const server = new ApolloServer({
   typeDefs,
