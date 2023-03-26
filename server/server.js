@@ -6,6 +6,11 @@ const db = require('./config/connection');
 
 const { authMiddleware } = require('./utils/auth');
 
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+  context: authMiddleware,
+});
 
 // create express app by calling express functions
 const app = express();
@@ -28,17 +33,17 @@ app.use(express.json());
 // check id NODE_ENV value is set to production, if it is, then for any route (or any web page on the site) requested, 
 // you are going to send the client/build file back 
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, '../client/build')));
-  }
+  app.use(express.static(path.join(__dirname, '../client/build')));
+}
 
-  // app.get handles get requests to the / path otherwise known as the root, barkr.com 
-  // we handle the request by sending the client the index.html file in the final "build" of the project
-  app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/build/index.html'));
-  });
+// app.get handles get requests to the / path otherwise known as the root, barkr.com 
+// we handle the request by sending the client the index.html file in the final "build" of the project
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
 
-  // db is mongoose.connection which was imported from config/connection.js
-  // it wraps the express app.listen method which starts the server on the PORT that we defined earlier
-  db.once('open', () => {
-    app.listen(PORT, () => console.log(`🌍 Now listening on localhost:${PORT}`));
-  });
+// db is mongoose.connection which was imported from config/connection.js
+// it wraps the express app.listen method which starts the server on the PORT that we defined earlier
+db.once('open', () => {
+  app.listen(PORT, () => console.log(`🌍 Now listening on localhost:${PORT}`));
+});
