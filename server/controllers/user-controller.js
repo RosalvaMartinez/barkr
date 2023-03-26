@@ -41,5 +41,43 @@ module.exports = {
         }
         const token = signToken(user);
         res.json({ token, user });
+    },
+    // async createDog({ body }, res) {
+    //     const dog = await Dog.create(body);
+
+    //     if (!dog) {
+    //         return res.status(400).json({ message: 'Something is wrong!' });
+    //     }
+
+    //     return res.status(200).json({ message: 'Successfully saved dog! ', dog: dog })
+    // },
+    // save a book to a user's `savedBooks` field by adding it to the set (to prevent duplicates)
+    // user comes from `req.user` created in the auth middleware function
+    async saveDog({ user, body }, res) {
+        console.log(user);
+        console.log("hello from save dog")
+        try {
+            const updatedUser = await User.findOneAndUpdate(
+                { _id: user._id },
+                { $addToSet: { savedDogs: body } },
+                { new: true, runValidators: true }
+            );
+            return res.json(updatedUser);
+        } catch (err) {
+            console.log(err);
+            return res.status(400).json(err);
+        }
+    },
+    // remove a book from `savedBooks`
+    async deleteDog({ user, params }, res) {
+        const updatedUser = await User.findOneAndUpdate(
+            { _id: user._id },
+            { $pull: { savedDogss: { dogId: params.dogId } } },
+            { new: true }
+        );
+        if (!updatedUser) {
+            return res.status(404).json({ message: "Couldn't find user with this id!" });
+        }
+        return res.json(updatedUser);
     }
 };

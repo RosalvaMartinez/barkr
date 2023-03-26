@@ -1,18 +1,21 @@
 const express = require('express');
-const { ApolloServer } = require('apollo-server-express');
+// const { ApolloServer } = require('apollo-server-express');
 // path is a core node module built into node, no need to install. built in
 const path = require('path');
 const db = require('./config/connection');
 
+const routes = require('./routes');
+
+
 
 const { authMiddleware } = require('./utils/auth');
-const { typeDefs, resolvers } = require('./schemas');
+// const { typeDefs, resolvers } = require('./schemas');
 
-const server = new ApolloServer({
-  typeDefs,
-  resolvers,
-  context: authMiddleware,
-});
+// const server = new ApolloServer({
+//   typeDefs,
+//   resolvers,
+//   context: authMiddleware,
+// });
 
 // create express app by calling express functions
 const app = express();
@@ -38,6 +41,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
+app.use(routes);
 // app.get handles get requests to the / path otherwise known as the root, barkr.com 
 // we handle the request by sending the client the index.html file in the final "build" of the project
 app.get('/', (req, res) => {
