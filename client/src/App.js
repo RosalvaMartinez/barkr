@@ -1,4 +1,4 @@
-import SignupForm from './components/SignupForm.js';
+import Signup from './pages/Signup.js';
 import Layout from './components/Layout.js';
 import Login from './pages/Login.js';
 import React from "react";
@@ -12,7 +12,7 @@ function App() {
     <div className="flex flex-col h-screen">
       <Router>
         <Layout >
-          <Login />
+          <Signup />
         </Layout>
       </Router>
     </div>
