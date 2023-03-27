@@ -5,6 +5,8 @@ import React from "react";
 import {
   BrowserRouter as Router,
 } from "react-router-dom";
+import AddDog from './pages/AddDog.js';
+import SignupForm from './components/SignupForm.js';
 
 
 function App() {
