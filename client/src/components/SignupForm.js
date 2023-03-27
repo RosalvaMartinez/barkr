@@ -22,7 +22,7 @@ function SignupForm() {
                     </p>
                 </label>
                 <button className="font-sans font-normal bg-blue-300 hover:bg-blue-500 active:bg-blue-400 p-2 rounded-lg text-lg focus:outline-none focus:ring focus:ring-blue-200 ...">
-                    Create Profile!
+                    Create Profile
                 </button>
             </form>
         </div>

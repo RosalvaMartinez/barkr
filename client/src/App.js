@@ -1,5 +1,6 @@
 import SignupForm from './components/SignupForm.js';
 import Layout from './components/Layout.js';
+import Login from './pages/Login.js';
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -11,7 +12,7 @@ function App() {
     <div className="flex flex-col h-screen">
       <Router>
         <Layout >
-          <SignupForm />
+          <Login />
         </Layout>
       </Router>
     </div>
