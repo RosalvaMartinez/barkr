@@ -1,5 +1,23 @@
-
 function SignupForm() {
+
+    const handleFormsubmit = async (e) => {
+        e.preventDefault()
+        const res = await fetch('/api/users/', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                username: "alex",
+                email: "alex@aol.com",
+                password: "alex"
+            })
+        })
+        const data = await res.json()
+        console.log(data)
+    }
+
     return (
         <div className="flex flex-col w-full h-full justify-center place-items-center">
             <form className="flex flex-col border border-black bg-slate-900 rounded-xl w-fit p-4 justify-center">
@@ -21,7 +39,7 @@ function SignupForm() {
                         Please provide a password you will remember.
                     </p>
                 </label>
-                <button className="font-sans font-normal bg-blue-300 hover:bg-blue-500 active:bg-blue-400 p-2 rounded-lg text-lg focus:outline-none focus:ring focus:ring-blue-200 ...">
+                <button onClick={ handleFormsubmit } className="font-sans font-normal bg-blue-300 hover:bg-blue-500 active:bg-blue-400 p-2 rounded-lg text-lg focus:outline-none focus:ring focus:ring-blue-200 ...">
                     Create Profile
                 </button>
             </form>
