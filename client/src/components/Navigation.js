@@ -6,7 +6,7 @@ import {
 function Navigation() {
     const navItems = [
         {
-            path: "/",
+            path: "/home",
             title: "Home"
         },
         {
@@ -18,9 +18,21 @@ function Navigation() {
             title: "Dog Profile"
         },
         {
-            path: "/aboutUs",
+            path: "/about",
             title: "About Us"
         },
+        {
+            path: "/signup",
+            title: "Sign Up"
+        },
+        {
+            path: "/login",
+            title: "Login"
+        },
+        {
+            path: "/addDog",
+            title: "Add Dog"
+        }
     ]
     return (
         <nav>

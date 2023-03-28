@@ -1,6 +1,6 @@
 function DogProfile() {
     return (
-        <h1>Dog Profilet</h1>
+        <h1>Dog Profile</h1>
     )
 };
 

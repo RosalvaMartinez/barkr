@@ -1,22 +1,58 @@
 import Signup from './pages/Signup.js';
 import Layout from './components/Layout.js';
 import Login from './pages/Login.js';
-import React from "react";
-import {
-  BrowserRouter as Router,
-} from "react-router-dom";
+import Home from './pages/Home.js';
+import DogProfile from './pages/DogProfile.js';
 import AddDog from './pages/AddDog.js';
-import SignupForm from './components/SignupForm.js';
+import Dashboard from './pages/Dashboard';
+import About from './pages/About';
 
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        path: "home",
+        element: <Home />
+      },
+      {
+        path: "signup",
+        element: <Signup />
+      },
+      {
+        path: "login",
+        element: <Login />
+      },
+      {
+        path: "addDog",
+        element: <AddDog />
+      },
+      {
+        path: "about",
+        element: <About />
+      },
+      {
+        path: "dashboard",
+        element: <Dashboard />
+      },
+      {
+        path: "dogProfile",
+        element: <DogProfile />
+      }
+    ]
+  }
+]);
 
 function App() {
   return (
     <div className="flex flex-col h-screen">
-      <Router>
-        <Layout >
-          <AddDog />
-        </Layout>
-      </Router>
+      <RouterProvider router={router} />
     </div>
   );
 }
