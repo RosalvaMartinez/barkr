@@ -55,11 +55,11 @@ function LoginForm() {
         <div className="flex flex-col w-full h-full justify-center place-items-center">
             <form onSubmit={handleFormsubmit} className="flex flex-col border border-black bg-slate-500 rounded-xl w-[300px] p-4 justify-center">
                 <label className="my-4">
-                    <input className="rounded w-full p-2" placeholder="email" name="email" type="text" value={email} onChange={handleEmailChange} />
+                    <input className="rounded w-full p-2" placeholder="email" name="email" type="email" value={email} onChange={handleEmailChange} />
                     <div className={`${emailError ? "visible" : "invisible"} h-4 text-red-600`}>{emailErrorMessage}</div>
                 </label>
                 <label className="my-4">
-                    <input className="rounded w-full p-2" placeholder="password" name="password" type="text" value={password} onChange={handlePasswordChange} />
+                    <input className="rounded w-full p-2" placeholder="password" name="password" type="password" value={password} onChange={handlePasswordChange} />
                     <div className={`${passwordError ? "visible" : "invisible"} h-4 text-red-600`}>{passwordErrorMessage}</div>
                 </label>
                 <button type="submit" className="font-sans font-normal bg-blue-300 hover:bg-blue-500 active:bg-blue-400 p-2 rounded-lg text-lg focus:outline-none focus:ring focus:ring-blue-200">

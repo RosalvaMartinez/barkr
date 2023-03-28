@@ -14,7 +14,7 @@ function App() {
     <div className="flex flex-col h-screen">
       <Router>
         <Layout >
-          <Signup />
+          <AddDog />
         </Layout>
       </Router>
     </div>
