@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Auth from '../utils/auth';
 
 
 
@@ -28,8 +29,9 @@ function SignupForm() {
                 password: password
             })
         })
-        const data = await res.json()
-        console.log(data)
+        const { token, user } = await res.json()
+        Auth.login(token)
+        // console.log(data)
     }
     const handleUsernameChange = (e) => {
         setUsername(e.target.value)
