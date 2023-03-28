@@ -6,14 +6,16 @@ function SignupForm() {
     const [username, setUsername] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    const [error, setError] = useState(false)
+    const [usernameError, setUsernameError] = useState(false)
+    const [emailError, setEmailError] = useState(false)
+    const [passwordError, setPasswordError] = useState(false)
     const [usernameErrorMessage, setUsernameErrorMessage] = useState("")
     const [emailErrorMessage, setEmailErrorMessage] = useState("")
     const [passwordErrorMessage, setPasswordErrorMessage] = useState("")
 
     const handleFormsubmit = async (e) => {
         e.preventDefault()
-        if (error) return
+        if (usernameError || emailError || passwordError) return
         const res = await fetch('/api/users/', {
             method: 'POST',
             headers: {
@@ -32,10 +34,10 @@ function SignupForm() {
     const handleUsernameChange = (e) => {
         setUsername(e.target.value)
         if (e.target.value === "") {
-            setError(true)
+            setUsernameError(true)
             setUsernameErrorMessage("must enter a username")
         } else {
-            setError(false)
+            setUsernameError(false)
             setUsernameErrorMessage("")
         }
     }
@@ -43,10 +45,10 @@ function SignupForm() {
     const handleEmailChange = (e) => {
         setEmail(e.target.value)
         if (e.target.value === "") {
-            setError(true)
+            setEmailError(true)
             setEmailErrorMessage("must enter a valid email")
         } else {
-            setError(false)
+            setEmailError(false)
             setEmailErrorMessage("")
         }
     }
@@ -54,10 +56,10 @@ function SignupForm() {
     const handlePasswordChange = (e) => {
         setPassword(e.target.value)
         if (e.target.value === "") {
-            setError(true)
+            setPasswordError(true)
             setPasswordErrorMessage("must enter a password")
         } else {
-            setError(false)
+            setPasswordError(false)
             setPasswordErrorMessage("")
         }
     }
