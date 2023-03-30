@@ -51,6 +51,7 @@ function Navigation() {
     return (
         <nav>
             <ul className="sm:flex hidden flex-row p-6">
+                {/* Show/hide different navlinks if user is logged in  */}
                 {gerald.loggedIn() ? (
                     navloggedIn.map((item) => {
                         return (
@@ -69,6 +70,7 @@ function Navigation() {
                         )
                     })
                 )}
+                {/* Show/hide Signout button if user is logged in */}
                 {gerald.loggedIn() ? (
                     <li onClick={gerald.logout} className="bg-slate-900 hover:bg-blue-500 active:bg-blue-400 p-2 mx-1 rounded-lg text-sm text-slate-100">Log Out
                     </li>
