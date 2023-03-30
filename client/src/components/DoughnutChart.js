@@ -31,6 +31,6 @@ export const data = {
     ],
 };
 
-export function Chart() {
+export function DoughnutChart() {
     return <Doughnut data={data} />;
 }
