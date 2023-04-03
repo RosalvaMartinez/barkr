@@ -29,7 +29,7 @@ export const options = {
         },
         title: {
             display: true,
-            text: 'Weight Progress',
+            text: 'Macro Nutrients',
             color: 'white',
             font: {
                 size: 20
@@ -53,17 +53,17 @@ export const data = {
     labels,
     datasets: [
         {
-            label: 'Dataset 1',
+            label: 'Carbs',
             data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
             backgroundColor: 'rgb(255, 99, 132)',
         },
         {
-            label: 'Dataset 2',
+            label: 'Protein',
             data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
             backgroundColor: 'rgb(75, 192, 192)',
         },
         {
-            label: 'Dataset 3',
+            label: 'Calories',
             data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
             backgroundColor: 'rgb(53, 162, 235)',
         },

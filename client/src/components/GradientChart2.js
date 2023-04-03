@@ -36,11 +36,11 @@ export const data = {
     labels,
     datasets: [
         {
-            label: 'Dataset 1',
+            label: 'Duration',
             data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
         },
         {
-            label: 'Dataset 2',
+            label: 'Distance',
             data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
         },
     ],
@@ -94,7 +94,7 @@ export function GradientChart2() {
             },
             title: {
                 display: true,
-                text: 'Exercise',
+                text: 'Stamina',
                 color: 'white',
                 font: {
                     size: 20

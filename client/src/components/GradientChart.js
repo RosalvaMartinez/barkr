@@ -37,11 +37,11 @@ export const data = {
     datasets: [
         {
             label: 'Weight',
-            data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
+            data: labels.map(() => faker.datatype.number({ min: 0, max: 200 })),
         },
         {
-            label: 'Cups of Food',
-            data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
+            label: 'Food Intake (grams)',
+            data: labels.map(() => faker.datatype.number({ min: 0, max: 800 })),
         },
     ],
 };
@@ -94,8 +94,11 @@ export function GradientChart() {
             },
             title: {
                 display: true,
-                text: 'Exercise',
-                color: 'white'
+                text: 'Diet',
+                color: 'white',
+                font: {
+                    size: 20
+                }
             },
         },
     };

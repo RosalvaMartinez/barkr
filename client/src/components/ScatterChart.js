@@ -27,7 +27,7 @@ export const options = {
         },
         title: {
             display: true,
-            text: 'Exercise',
+            text: 'Treats/Vitamin',
             color: 'white',
             font: {
                 size: 20
@@ -39,10 +39,10 @@ export const options = {
 export const data = {
     datasets: [
         {
-            label: 'A dataset',
+            label: 'Vitamins',
             data: Array.from({ length: 100 }, () => ({
-                x: faker.datatype.number({ min: -100, max: 100 }),
-                y: faker.datatype.number({ min: -100, max: 100 }),
+                x: faker.datatype.number({ min: 0, max: 100 }),
+                y: faker.datatype.number({ min: 0, max: 100 }),
             })),
             backgroundColor: 'rgba(255, 99, 132, 1)',
         },
