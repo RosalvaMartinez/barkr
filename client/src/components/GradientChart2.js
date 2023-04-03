@@ -36,20 +36,20 @@ export const data = {
     labels,
     datasets: [
         {
-            label: 'Weight',
+            label: 'Dataset 1',
             data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
         },
         {
-            label: 'Cups of Food',
+            label: 'Dataset 2',
             data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
         },
     ],
 };
 
 function createGradient(ctx, area) {
-    const colorStart = "lime"
-    const colorMid = "green"
-    const colorEnd = "teal"
+    const colorStart = "yellow"
+    const colorMid = "orange"
+    const colorEnd = "red"
 
     const gradient = ctx.createLinearGradient(0, area.bottom, 0, area.top);
 
@@ -60,7 +60,7 @@ function createGradient(ctx, area) {
     return gradient;
 }
 
-export function GradientChart() {
+export function GradientChart2() {
     const chartRef = useRef(null);
     const [chartData, setChartData] = useState({
         datasets: [],
@@ -84,5 +84,5 @@ export function GradientChart() {
         setChartData(chartData);
     }, []);
 
-    return <Chart ref={chartRef} type='line' data={chartData}/>;
+    return <Chart ref={chartRef} type='line' data={chartData} />;
 }
