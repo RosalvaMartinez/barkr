@@ -1,6 +1,8 @@
+import LearnMore from "../components/LearnMore";
+
 function About() {
     return (
-        <h1 className="text-white">About</h1>
+        <LearnMore />
     )
 };
 
