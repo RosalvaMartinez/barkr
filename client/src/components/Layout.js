@@ -6,7 +6,7 @@ function Layout() {
     return (
         <>
             <Header />
-            <main className="bg-slate-900 flex-grow"><Outlet /></main>
+            <main className="bg-slate-900 p-4 flex-grow"><Outlet /></main>
             <Footer />
         </>
     )

@@ -84,5 +84,23 @@ export function GradientChart2() {
         setChartData(chartData);
     }, []);
 
-    return <Chart ref={chartRef} type='line' data={chartData} />;
+    const options = {
+        responsive: true,
+        plugins: {
+            legend: {
+                labels: {
+                    color: 'white'
+                }
+            },
+            title: {
+                display: true,
+                text: 'Exercise',
+                color: 'white',
+                font: {
+                    size: 20
+                }
+            },
+        },
+    };
+    return <Chart ref={chartRef} type='line' data={chartData} options={options}/>;
 }

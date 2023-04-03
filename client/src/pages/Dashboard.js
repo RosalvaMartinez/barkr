@@ -7,44 +7,44 @@ import { GradientChart2 } from "../components/GradientChart2";
 function Dashboard() {
     return (
         <>
-            <div className="flex flex-col sm:flex-row md:flex-row">
+            <div className="flex flex-col sm:flex-row sm:gap-8 sm:justify-center sm:place-items-center">
                 <div className="flex flex-col">
-                    <div className="bg-slate-800 rounded-lg p-2 m-2 
+                    <div className="flex justify-center place-items-center bg-slate-800 rounded-lg my-2 
                     w-full h-[300px] 
-                    sm:w-[px] sm:h-[px] 
-                    md:w-[px] md:h-[px] 
-                    lg:w-[px] lg:h-[px]">
-                        {/* <DoughnutChart /> */}
+                    sm:w-[300px] sm:h-[400px] 
+                    md:w-[400px] md:h-[570px] 
+                    lg:w-[500px] lg:h-[600px]">
+                        <DoughnutChart />
                     </div>
-                    <div className=" bg-slate-800 rounded-lg p-2 m-2 
+                    <div className="flex justify-center place-items-center bg-slate-800 rounded-lg my-2 
                     w-full h-[200px] 
-                    sm:w-[px] sm:h-[px] 
-                    md:w-[px] md:h-[px] 
-                    lg:w-[px] lg:h-[px]">
-                        {/* <GradientChart /> */}
+                    sm:w-[300px] sm:h-[215px] 
+                    md:w-[400px] md:h-[350px] 
+                    lg:w-[500px] lg:h-[390px]">
+                        <GradientChart />
                     </div>
                 </div>
                 <div className="flex flex-col">
-                    <div className=" bg-slate-800 rounded-lg p-2 m-2 
+                    <div className="flex justify-center place-items-center bg-slate-800 rounded-lg my-2 
                     w-full h-[200px] 
-                    sm:w-[px] sm:h-[px] 
-                    md:w-[px] md:h-[px] 
-                    lg:w-[px] lg:h-[px]">
-                        {/* <GradientChart2 /> */}
+                    sm:w-[300px] sm:h-[200px] 
+                    md:w-[400px] md:h-[300px] 
+                    lg:w-[500px] lg:h-[325px]">
+                        <GradientChart2 />
                     </div>
-                    <div className="bg-slate-800 rounded-lg p-2 m-2 
+                    <div className="flex justify-center place-items-center bg-slate-800 rounded-lg my-2 
                     w-full h-[200px] 
-                    sm:w-[px] sm:h-[px] 
-                    md:w-[px] md:h-[px] 
-                    lg:w-[px] lg:h-[px]">
-                        {/* <ScatterChart /> */}
+                    sm:w-[300px] sm:h-[200px] 
+                    md:w-[400px] md:h-[300px] 
+                    lg:w-[500px] lg:h-[325px]">
+                        <ScatterChart />
                     </div>
-                    <div className=" bg-slate-800 rounded-lg p-2 m-2 
-                    w-full h-[300px] 
-                    sm:w-[px] sm:h-[px] 
-                    md:w-[px] md:h-[px] 
-                    lg:w-[px] lg:h-[px]">
-                        {/* <StackedbarChart /> */}
+                    <div className="flex justify-center place-items-center bg-slate-800 rounded-lg my-2 
+                    w-full h-[200px] 
+                    sm:w-[300px] sm:h-[200px] 
+                    md:w-[400px] md:h-[300px] 
+                    lg:w-[500px] lg:h-[325px]">
+                        <StackedbarChart />
                     </div>
                 </div>
             </div>

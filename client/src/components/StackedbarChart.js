@@ -22,15 +22,24 @@ ChartJS.register(
 
 export const options = {
     plugins: {
+        legend: {
+            labels: {
+               color: 'white'
+            }
+        },
         title: {
             display: true,
-            text: 'Chart.js Bar Chart - Stacked',
+            text: 'Weight Progress',
+            color: 'white',
+            font: {
+                size: 20
+            }
         },
     },
     responsive: true,
     scales: {
         x: {
-            stacked: true,
+            stacked: true
         },
         y: {
             stacked: true,
@@ -62,5 +71,5 @@ export const data = {
 };
 
 export function StackedbarChart() {
-    return <Bar options={options} data={data}/>;
+    return <Bar options={options} data={data} />;
 }

@@ -68,7 +68,7 @@ function SignupForm() {
 
     return (
         <div className="flex flex-col w-full h-full justify-center place-items-center">
-            <form onSubmit={handleFormsubmit} className="flex flex-col border border-black bg-slate-500 rounded-xl w-[300px] p-4 justify-center">
+            <form onSubmit={handleFormsubmit} className="flex flex-col border border-black bg-slate-800 rounded-xl w-[300px] p-4 justify-center">
                 <label className="my-4">
                     <input className="rounded w-full p-2" placeholder="username" name="username" type="text" value={username} onChange={handleUsernameChange} />
                     <div className={`${usernameError ? "visible" : "invisible"} h-4 text-red-600`}>{usernameErrorMessage}</div>

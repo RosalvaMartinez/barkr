@@ -9,7 +9,7 @@ export const data = {
     datasets: [
         {
             label: 'Hours a week',
-            data: [12, 19, 3, 5, 2],
+            data: [12, 19, 42, 5, 2],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -29,6 +29,25 @@ export const data = {
     ],
 };
 
+export const options = {
+    responsive: true,
+    plugins: {
+        legend: {
+            labels: {
+                color: 'white'
+            }
+        },
+        title: {
+            display: true,
+            text: 'Exercise',
+            color: 'white',
+            font: {
+                size: 20
+            }
+        },
+    },
+};
+
 export function DoughnutChart() {
-    return <Doughnut data={data}/>;
+    return <Doughnut data={data} options={options} />;
 }

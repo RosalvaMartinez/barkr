@@ -18,6 +18,22 @@ export const options = {
             beginAtZero: true,
         },
     },
+    responsive: true,
+    plugins: {
+        legend: {
+            labels: {
+                color: 'white'
+            }
+        },
+        title: {
+            display: true,
+            text: 'Exercise',
+            color: 'white',
+            font: {
+                size: 20
+            }
+        },
+    },
 };
 
 export const data = {
