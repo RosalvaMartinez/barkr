@@ -1,6 +1,10 @@
+import ActivityForm from '../components/ActivityForm'
+
 function DogProfile() {
     return (
-        <h1 className="text-white">Dog Profile</h1>
+        <>
+        <ActivityForm />
+        </>
     )
 };
 
