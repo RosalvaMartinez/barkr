@@ -1,7 +1,7 @@
 function LearnMore() {
     return (
 
-        <div className="bg-white dark:bg-gray-900">
+        <div className="flex border border-black rounded-xl p-4 m-6 bg-gradient-to-r from-purple-800 to-blue-700 transition">
             <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
                 <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12 mb-8">
                     <h1 className="text-gray-900 dark:text-white text-3xl md:text-4xl font-sans hover:italic font-extrabold mb-2">Monitoring Your Pet's Health</h1>
