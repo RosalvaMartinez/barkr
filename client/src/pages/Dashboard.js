@@ -7,6 +7,7 @@ import { GradientChart2 } from "../components/GradientChart2";
 function Dashboard() {
     return (
         <>
+        <h1 className="font-sans font-extrabold text-slate-200 text-lg">Scooter's Activity:</h1>
             <div className="flex flex-col sm:flex-row sm:gap-8 sm:justify-center sm:place-items-center">
                 <div className="flex flex-col">
                     <div className="flex justify-center place-items-center bg-slate-800 rounded-lg my-2 
