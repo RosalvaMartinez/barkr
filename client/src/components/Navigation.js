@@ -15,7 +15,7 @@ function Navigation() {
         },
         {
             path: "/about",
-            title: "About Us"
+            title: "Learn More"
         },
         {
             path: "/signup",
@@ -38,11 +38,11 @@ function Navigation() {
         },
         {
             path: "/dogProfile",
-            title: "Dog Profile"
+            title: "Log New Activity"
         },
         {
             path: "/about",
-            title: "About Us"
+            title: "Learn More"
         },
         {
             path: "/addDog",
