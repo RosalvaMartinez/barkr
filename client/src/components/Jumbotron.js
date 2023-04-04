@@ -5,17 +5,6 @@ import {
 
 function Jumbotron() {
 
-    const buttons = [
-        {
-            path: "/learnMore",
-            title: "Learn More"
-        },
-        {
-            path: "/signup",
-            title: "Get Started"
-        }
-    ]
-
     return (
         <div className="bg-white dark:bg-gray-900">
             <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
