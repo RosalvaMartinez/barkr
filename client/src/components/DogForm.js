@@ -100,7 +100,7 @@ function DogForm() {
 
     return (
         <div className="flex flex-col w-full h-full justify-center place-items-center">
-            <form onSubmit={handleFormsubmit} className="flex flex-col border border-black bg-slate-500 rounded-xl w-[300px] p-4 justify-center">
+            <form onSubmit={handleFormsubmit} className="flex flex-col border border-black rounded-xl w-[300px] p-4 justify-center bg-gradient-to-r from-slate-800 to-slate-700">
                 <label className="my-4">
                     <input className="rounded w-full p-2" placeholder="name" name="name" type="text" value={name} onChange={handleNameChange} />
                     <div className={`${nameError ? "visible" : "invisible"} h-4 text-red-600`}>{nameErrorMessage}</div>
